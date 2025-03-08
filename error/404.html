@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
         body {
             background-color: #5B0002;
             color: #FFFFFF;
-            font-family: Arial, sans-serif;
+            font-family: 'Rubik', sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             text-align: center;
+            overflow: hidden;
         }
+
         .container {
             padding: 20px;
             border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.6s ease-out;
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+            animation: fadeIn 0.5s ease-in-out;
         }
-        img {
+
+        .logo {
             width: 150px;
             height: auto;
             margin-bottom: 20px;
-            animation: float 3s infinite ease-in-out;
         }
+
         h1 {
             font-size: 48px;
-            margin: 0;
             color: #B9141A;
-            animation: slideDown 0.5s ease-out;
+            margin: 0;
+            animation: bounce 1s ease-in-out;
         }
+
         p {
-            font-size: 20px;
-            margin: 10px 0;
-            opacity: 0.8;
+            font-size: 18px;
+            margin: 10px 0 20px;
+            opacity: 0.9;
         }
+
         a {
             color: #B9141A;
             text-decoration: none;
             padding: 10px 20px;
             background-color: #FFFFFF;
-            color: #5B0002;
+            color: #B9141A;
             border-radius: 10px;
-            font-size: 18px;
-            transition: background 0.3s ease;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
             display: inline-block;
-            margin-top: 20px;
         }
+
         a:hover {
             background-color: #B9141A;
             color: #FFFFFF;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes float {
+        @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
@@ -76,11 +78,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/akatsuki-world/assets/refs/heads/main/akatsuki_logo_with_name_white_500x500.png" alt="Akatsuki Logo">
-        <h1>404 - Not Found</h1>
-        <p>The page you are looking for doesn’t exist or has been moved.</p>
-        <a href="/">Go Home</a>
+        <img src="https://raw.githubusercontent.com/akatsuki-world/assets/refs/heads/main/akatsuki_logo_main.svg" alt="Akatsuki Logo" class="logo">
+        <h1>404</h1>
+        <p>Oops! The page you’re looking for doesn't exist.</p>
+        <a href="/">Take Me Home</a>
     </div>
 </body>
 </html>
-
